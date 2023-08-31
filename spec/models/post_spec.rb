@@ -23,4 +23,14 @@ RSpec.describe Post, type: :model do
     subject.comments_counter = -1
     expect(subject).to_not be_valid
   end
+
+  it 'likes counter should be an integer' do
+    subject.likes_counter = 'not an integer'
+    expect(subject).to_not be_valid
+  end
+
+  it 'likes counter should be greater than or equal to 0' do
+    subject.likes_counter = -1
+    expect(subject).to_not be_valid
+  end
 end
