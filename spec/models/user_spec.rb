@@ -8,4 +8,14 @@ RSpec.describe User, type: :model do
     subject.name = nil
     expect(subject).to_not be_valid
   end
+
+  it 'posts counter should be an integer' do
+    subject.posts_counter = 'not an integer'
+    expect(subject).to_not be_valid
+  end
+
+  it 'posts counter should be greater than or equal to zero' do
+    subject.posts_counter = -1
+    expect(subject).to_not be_valid
+  end
 end
