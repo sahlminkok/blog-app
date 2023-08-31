@@ -13,4 +13,14 @@ RSpec.describe Post, type: :model do
     subject.title = 'this is a title that should be more than two hundred and fifty words, I guess its not enough still, lets add lorem ipsum, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
     expect(subject).to_not be_valid
   end
+
+  it 'comments counter should be an integer' do
+    subject.comments_counter = 'not an integer'
+    expect(subject).to_not be_valid
+  end
+
+  it 'comments counter should be greater than or equal to 0' do
+    subject.comments_counter = -1
+    expect(subject).to_not be_valid
+  end
 end
