@@ -36,6 +36,12 @@ RSpec.describe Post, type: :model do
     expect(subject).to_not be_valid
   end
 
+  describe '#update_posts_counter' do
+    it 'increments author posts counter' do
+      expect { subject.update_posts_counter }.to change { subject.author.posts_counter }.by(1)
+    end
+  end
+
   describe '#five_most_recent_comments' do
     it 'should return the five most recent comments of a given post' do
       user = User.create(name: 'Sahalu')
