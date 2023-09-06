@@ -1,1 +1,10 @@
-<h1>Here is a post for a given user<h1>
+<div class="post">
+  <div class="post-title">
+    <h6>Post #<%= @post.id %> by <%= @post.author.name %> </h6>
+    <p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+  </div>
+  <h3><%= @post.title %></h3>
+  <h4><%= @post.text %></h4>
+</div>
+
+<%= render "shared/comment", comments: @post.comments %>
