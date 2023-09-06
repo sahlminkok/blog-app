@@ -1,15 +1,90 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: #f1f1f1;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+}
+
+.users__user {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  gap: 8px;
+}
+
+.users__user--image {
+  height: 150px;
+  min-width: 20%;
+  background-color: #999;
+}
+
+.users__user--body {
+  display: flex;
+  flex-direction: column;
+  background-color: #999;
+  gap: 10px;
+  width: 90%;
+  height: 150px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.users__user--body p {
+  align-self: flex-end;
+}
+
+.bio {
+  padding: 10px;
+  background-color: #999;
+  margin-bottom: 5px;
+}
+
+.user-post,
+.user-post:hover,
+.user-post:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  background-color: #999;
+  gap: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.post h6 {
+  padding-top: 15px;
+}
+
+.post p {
+  align-self: flex-end;
+  margin-right: 15px;
+}
+
+.comments {
+  background-color: #999;
+  padding: 10px;
+  margin-top: -4px;
+  margin-bottom: 8px;
+}
+
+.post-title {
+  display: flex;
+  justify-content: space-between;
+}
