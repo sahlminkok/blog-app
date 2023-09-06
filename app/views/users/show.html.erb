@@ -1,1 +1,18 @@
-<h1>Here is a view for each user</h1>
+<%= render 'shared/user', user: @user %>
+
+<div class="bio">
+  <h4>Bio</h4>
+  <%= @user.bio %>
+</div>
+
+<% @user.three_most_recent_posts.each do |post| %>
+  <a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="user-post">
+    <div>
+      <%= render 'shared/post', post: post %>
+    </div>
+  </a>
+<% end %>
+
+<div class="d-flex pt-3 justify-content-center">
+  <%= link_to "See all posts", user_posts_path(@user), class: "btn btn-secondary" %>
+</div>
