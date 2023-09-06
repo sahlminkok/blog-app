@@ -1,1 +1,7 @@
-<h1>This is Users Index</h1>
+<div class="users">
+  <% @users.each do |user| %>
+    <a href="/users/<%= user.id %>" class="user-post">
+      <%= render "shared/user", user: user %>
+    </a>
+  <% end %>
+</div>
