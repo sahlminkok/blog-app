@@ -1,1 +1,10 @@
-<h1>Here is a list of posts for a given user</h1>
+<%= render "shared/user", user: @user %>
+
+<div class="posts">
+  <% @posts.each do |post| %>
+    <a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="user-post">
+      <%= render 'shared/post', post: post %>
+      <%= render "shared/comment", comments: post.five_most_recent_comments unless post.five_most_recent_comments.empty? %>
+    </a>
+  <% end %>
+</div>
