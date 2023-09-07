@@ -1,4 +1,4 @@
-<%= render 'shared/user', user: @user %>
+<%= render 'partials/user', user: @user %>
 
 <div class="bio">
   <h4>Bio</h4>
@@ -8,7 +8,7 @@
 <% @user.three_most_recent_posts.each do |post| %>
   <a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="user-post">
     <div>
-      <%= render 'shared/post', post: post %>
+      <%= render 'partials/post', post: post %>
     </div>
   </a>
 <% end %>
