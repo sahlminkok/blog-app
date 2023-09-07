@@ -88,3 +88,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.new-post {
+  min-height: 100vh;
+}
