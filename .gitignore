@@ -32,3 +32,4 @@
 
 # Ignore node modules files
 node_modules/
+config.bat
