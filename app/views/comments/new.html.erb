@@ -1,0 +1,18 @@
+<div class="d-flex align-items-center justify-content-center text-secondary new-post">
+  <%= form_with model: @comment, url: user_post_comments_path, local: true do |f| %>
+    <h2>Comment on this Post</h2>
+    <div class="row mb-3">
+      <%= f.label :text, class: "col-form-label" %>
+      <div class="col">
+        <%= f.text_area :text, class: "form-control", rows: 4 %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <%= f.submit "Comment", class: "btn btn-secondary" %>
+        <%= link_to "Back", user_post_path(@user, @post), class: "btn btn-secondary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+

@@ -1,0 +1,22 @@
+<div class="d-flex align-items-center justify-content-center text-secondary new-post">
+  <%= form_with model: @post, url: user_posts_path, local: true do |f| %>
+    <h2>Create a Post</h2>
+    <div class="row mb-3">
+      <%= f.label :title, class: "col-form-label" %>
+      <div class="col">
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <%= f.label :text, class: "col-form-label" %>
+      <div class="col">
+        <%= f.text_area :text, class: "form-control", rows: 5 %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <%= f.submit "Create post", class: "btn btn-secondary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

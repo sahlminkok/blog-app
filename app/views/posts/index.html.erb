@@ -8,3 +8,6 @@
     </a>
   <% end %>
 </div>
+
+<%= link_to "Create a Post", new_user_post_path(@user, @post), class: "btn btn-secondary" %>
+<%= link_to "Back", user_path(@user), class: "btn btn-secondary" %>
