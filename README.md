@@ -112,7 +112,7 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-  rspec test/name-of-the-file
+  rspec spec
 ```
 
 
