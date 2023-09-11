@@ -46,10 +46,15 @@ RSpec.describe 'index page', type: :system do
   describe 'links attached to the page' do
     before { visit user_posts_path(@user) }
 
-    it "redirects to the post show page when clicking on a post" do
+    it 'redirects to the post show page when clicking on a post' do
       post = @post1
       find("a[href='#{user_post_path(@user, post)}']").click
       expect(page).to have_current_path(user_post_path(@user, post))
+    end
+
+    it 'redirects to create new post when clicking on create_a_post button' do
+      click_link 'Create a Post'
+      expect(page).to have_current_path(new_user_post_path(@user, @posts))
     end
   end
 end
