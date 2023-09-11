@@ -11,5 +11,9 @@ RSpec.describe 'index page', type: :system do
     it 'show profile picture of user' do
       expect(page).to have_content(user.photo)
     end
+
+    it 'show the name of user' do
+      expect(page).to have_content(user.name)
+    end
   end
 end
