@@ -20,7 +20,7 @@ RSpec.describe 'Users Index Page' do
     user = User.create(name: 'Sahalu', photo: 'https://placehold.co/200x133', posts_counter: 0)
 
     visit users_path
-    
+
     find("a[href='/users/#{user.id}']", visible: :all).click
     expect(page).to have_current_path(user_path(user))
   end

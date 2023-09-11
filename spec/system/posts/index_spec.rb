@@ -4,8 +4,10 @@ RSpec.describe 'Posts Index Page', type: :system do
   before(:each) do
     @user = User.create(name: 'Sahalu', posts_counter: 0)
 
-    @post1 = @user.posts.create(title: 'Sample Post Title', text: 'Sample Post Content', likes_counter: 0, comments_counter: 0)
-    @post2 = @user.posts.create(title: 'Sample Post Title', text: 'Sample Post Content', likes_counter: 0, comments_counter: 0)
+    @post1 = @user.posts.create(title: 'Sample Post Title', text: 'Sample Post Content', likes_counter: 0,
+                                comments_counter: 0)
+    @post2 = @user.posts.create(title: 'Sample Post Title', text: 'Sample Post Content', likes_counter: 0,
+                                comments_counter: 0)
 
     Comment.create(post: @post1, author: @user, text: 'Sample Post Comment')
     Like.create(post: @post1, author: @user)
@@ -13,7 +15,7 @@ RSpec.describe 'Posts Index Page', type: :system do
 
   describe 'displays user information:' do
     before { visit user_posts_path(@user) }
-    
+
     it 'show profile picture of user' do
       expect(page).to have_content(@user.photo)
     end
