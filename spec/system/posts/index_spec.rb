@@ -15,5 +15,9 @@ RSpec.describe 'index page', type: :system do
     it 'show the name of user' do
       expect(page).to have_content(user.name)
     end
+
+    it 'show number of posts of user' do
+      expect(page).to have_content(user.posts_counter)
+    end
   end
 end
