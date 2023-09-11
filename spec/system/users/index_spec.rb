@@ -12,6 +12,7 @@ RSpec.describe 'Users Index Page' do
     [user, user1, user2, user3].each do |u|
       expect(page).to have_content(u.name)
       expect(page).to have_css("img[src*='#{u.photo}']")
+      expect(page).to have_content("Number of posts: #{u.posts_counter}")
     end
   end
 end
