@@ -56,5 +56,10 @@ RSpec.describe 'index page', type: :system do
       click_link 'Create a Post'
       expect(page).to have_current_path(new_user_post_path(@user, @posts))
     end
+
+    it 'redirects to the user show page when clicking on back button' do
+      click_link 'Back'
+      expect(page).to have_current_path(user_path(@user))
+    end
   end
 end
