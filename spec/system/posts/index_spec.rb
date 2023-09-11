@@ -6,4 +6,10 @@ RSpec.describe 'index page', type: :system do
   before do
     visit user_posts_path(user)
   end
+
+  describe 'displays user information:' do
+    it 'show profile picture of user' do
+      expect(page).to have_content(user.photo)
+    end
+  end
 end
