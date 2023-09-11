@@ -35,5 +35,9 @@ RSpec.describe 'index page', type: :system do
         expect(page).to have_content(post.title)
       end
     end
+
+    it 'shows the first comment on a post' do
+      expect(page).to have_content(@post2.comments.first)
+    end
   end
 end
