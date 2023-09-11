@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'index page', type: :system do
+RSpec.describe 'Posts Index Page', type: :system do
   before(:each) do
     @user = User.create(name: 'Sahalu', posts_counter: 0)
 
