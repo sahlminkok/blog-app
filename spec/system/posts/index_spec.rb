@@ -42,4 +42,14 @@ RSpec.describe 'index page', type: :system do
       expect(page).to have_content(@post2.comments.first)
     end
   end
+
+  describe 'links attached to the page' do
+    before { visit user_posts_path(@user) }
+
+    it "redirects to the post show page when clicking on a post" do
+      post = @post1
+      find("a[href='#{user_post_path(@user, post)}']").click
+      expect(page).to have_current_path(user_post_path(@user, post))
+    end
+  end
 end
