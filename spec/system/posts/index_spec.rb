@@ -33,6 +33,8 @@ RSpec.describe 'index page', type: :system do
     it 'shows all elements of a post' do
       [@post1, @post2].each do |post|
         expect(page).to have_content(post.title)
+        expect(page).to have_content("Comments: #{post.comments_counter}")
+        expect(page).to have_content("Likes: #{post.likes_counter}")
       end
     end
 
