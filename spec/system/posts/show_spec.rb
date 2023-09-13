@@ -108,5 +108,11 @@ RSpec.describe 'Post page [posts#show]', type: :system do
         expect(page).to have_current_path(user_post_path(@user, @post))
       end
     end
+
+    context '- a \'back\' button:' do
+      it '> is displayed at the bottom of the page ' do
+        expect(page).to have_link('Back')
+      end
+    end
   end
 end
