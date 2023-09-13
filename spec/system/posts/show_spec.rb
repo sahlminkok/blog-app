@@ -63,5 +63,13 @@ RSpec.describe 'Post page [posts#show]', type: :system do
     it '- shows the full list of comments' do
       within('div.comments') { expect(page.all('p').count).to be(@post.comments_counter) }
     end
+
+    context '- each of the comments' do
+      it '- has an author' do
+        @post.comments.each do |c|
+          within('div.comments') { expect(page).to have_content(/#{c.author.name}:/) }
+        end
+      end
+    end
   end
 end
