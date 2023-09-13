@@ -88,10 +88,15 @@ RSpec.describe 'User page [users#show]', type: :system do
         expect(page).to have_current_path(user_posts_path(@user))
       end
     end
-
+    
     context '- a \'back\' button' do
       it '> is shown at the bottom of the page' do
         expect(page).to have_link('Back')
+      end
+
+      it "> when clicked it opens the 'all users page'" do
+        click_on('Back')
+        expect(page).to have_current_path(root_path)
       end
     end
   end
