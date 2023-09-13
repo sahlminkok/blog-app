@@ -53,170 +53,170 @@ User.create(name: 'Frank', photo: 'https://plchldr.co/i/75?bg=252f3f&fc=ffffff&t
 # Posts,
 # -----------------------------,
 # Tom,
-Post.create(author: User.find_by(name: 'Tom'), title: 'Hello friends', text: 'I joined to this awesome blog to be in touch with all of you.')
+Post.create(author: User.find_by(name: 'Tom'), title: 'Hello friends', text: 'I joined to this awesome blog to be in touch with all of you.', comments_counter: 0, likes_counter: 0)
 
 # Ben
-Post.create(author: User.find_by(name: 'Ben'), title: 'Proud of My Students', text: 'My students worked so hard on their final projects and they all did a great job!')
-Post.create(author: User.find_by(name: 'Ben'), title: 'Looking Forward to the New School Year', text: 'I can\'t wait to meet my new students and start a new adventure!')
-Post.create(author: User.find_by(name: 'Ben'), title: 'Best Day of Teaching Career', text: 'I just had the best day of my teaching career! My students were so engaged and excited to learn.')
+Post.create(author: User.find_by(name: 'Ben'), title: 'Proud of My Students', text: 'My students worked so hard on their final projects and they all did a great job!', comments_counter: 0, likes_counter: 0)
+Post.create(author: User.find_by(name: 'Ben'), title: 'Looking Forward to the New School Year', text: 'I can\'t wait to meet my new students and start a new adventure!', comments_counter: 0, likes_counter: 0)
+Post.create(author: User.find_by(name: 'Ben'), title: 'Best Day of Teaching Career', text: 'I just had the best day of my teaching career! My students were so engaged and excited to learn.', comments_counter: 0, likes_counter: 0)
 
 # Clara
-Post.create(author: User.find_by(name: 'Clara'), title: 'New Software Release', text: 'The new software release was a huge success! It\'s already been adopted by hundreds of customers.')
-Post.create(author: User.find_by(name: 'Clara'), title: 'AI to Improve Customer Experience', text: "I'm excited to be working on a new project that will use AI to improve the customer experience.")
-Post.create(author: User.find_by(name: 'Clara'), title: 'New Website for Client', text: 'The client was really happy with the website. They said it was exactly what they were looking for.')
+Post.create(author: User.find_by(name: 'Clara'), title: 'New Software Release', text: 'The new software release was a huge success! It\'s already been adopted by hundreds of customers.', comments_counter: 0, likes_counter: 0)
+Post.create(author: User.find_by(name: 'Clara'), title: 'AI to Improve Customer Experience', text: "I'm excited to be working on a new project that will use AI to improve the customer experience.", comments_counter: 0, likes_counter: 0)
+Post.create(author: User.find_by(name: 'Clara'), title: 'New Website for Client', text: 'The client was really happy with the website. They said it was exactly what they were looking for.', comments_counter: 0, likes_counter: 0)
 
 # Daniel
-Post.create(author: User.find_by(name: 'Daniel'), title: 'Machine Learning to Improve Search', text: 'I\'m working on a new project that will use machine learning to improve the way people find information online.')
+Post.create(author: User.find_by(name: 'Daniel'), title: 'Machine Learning to Improve Search', text: 'I\'m working on a new project that will use machine learning to improve the way people find information online.', comments_counter: 0, likes_counter: 0)
 
 # Ethan
-Post.create(author: User.find_by(name: 'Ethan'), title: 'New Product Launch', text: 'We\'re launching our new product! It\'s a new way to find and book flights, and I think it\'s going to be a huge success.')
-Post.create(author: User.find_by(name: 'Ethan'), title: 'Exciting Things Planned', text: "We have a lot of exciting things planned for the next few months. I can't wait to share them with you!")
-Post.create(author: User.find_by(name: 'Ethan'), title: 'Reducing Costs for Client', text: "I'm also working on a project to help a client reduce their costs. We're looking at ways to streamline their operations and eliminate waste.")
-Post.create(author: User.find_by(name: 'Ethan'), title: 'Client Needs Software Engineer', text: "I'm working with a client to find a new software engineer. It's a challenging but rewarding project.")
+Post.create(author: User.find_by(name: 'Ethan'), title: 'New Product Launch', text: 'We\'re launching our new product! It\'s a new way to find and book flights, and I think it\'s going to be a huge success.', comments_counter: 0, likes_counter: 0)
+Post.create(author: User.find_by(name: 'Ethan'), title: 'Exciting Things Planned', text: "We have a lot of exciting things planned for the next few months. I can't wait to share them with you!", comments_counter: 0, likes_counter: 0)
+Post.create(author: User.find_by(name: 'Ethan'), title: 'Reducing Costs for Client', text: "I'm also working on a project to help a client reduce their costs. We're looking at ways to streamline their operations and eliminate waste.", comments_counter: 0, likes_counter: 0)
+Post.create(author: User.find_by(name: 'Ethan'), title: 'Client Needs Software Engineer', text: "I'm working with a client to find a new software engineer. It's a challenging but rewarding project.", comments_counter: 0, likes_counter: 0)
 
 # Frank
-Post.create(author: User.find_by(name: 'Frank'), title: 'Supply Chain Efficiency', text: "I'm helping a client improve their supply chain efficiency. It's a complex project, but it's also very rewarding.")
+Post.create(author: User.find_by(name: 'Frank'), title: 'Supply Chain Efficiency', text: "I'm helping a client improve their supply chain efficiency. It's a complex project, but it's also very rewarding.", comments_counter: 0, likes_counter: 0)
 
 # Grace
-Post.create(author: User.find_by(name: 'Grace'), title: 'Candidate Landed Dream Job', text: "I just helped a candidate land their dream job! It's such a rewarding feeling to know that I played a role in helping them achieve their goals.")
+Post.create(author: User.find_by(name: 'Grace'), title: 'Candidate Landed Dream Job', text: "I just helped a candidate land their dream job! It's such a rewarding feeling to know that I played a role in helping them achieve their goals.", comments_counter: 0, likes_counter: 0)
 
 # Henry
-Post.create(author: User.find_by(name: 'Henry'), title: 'First Research Paper Published', text: 'I published a research paper! A study on the effects of exercise on cognitive function in older adults.')
-Post.create(author: User.find_by(name: 'Henry'), title: 'Sleep Deprivation and Memory', text: "I'm working on a new research project that will look at the effects of sleep deprivation on memory.")
+Post.create(author: User.find_by(name: 'Henry'), title: 'First Research Paper Published', text: 'I published a research paper! A study on the effects of exercise on cognitive function in older adults.', comments_counter: 0, likes_counter: 0)
+Post.create(author: User.find_by(name: 'Henry'), title: 'Sleep Deprivation and Memory', text: "I'm working on a new research project that will look at the effects of sleep deprivation on memory.", comments_counter: 0, likes_counter: 0)
 
 # Isabella
-Post.create(author: User.find_by(name: 'Isabella'), title: 'Fractions Unit with Students', text: 'We were working on a new unit on fractions, and they were all asking great questions.')
+Post.create(author: User.find_by(name: 'Isabella'), title: 'Fractions Unit with Students', text: 'We were working on a new unit on fractions, and they were all asking great questions.', comments_counter: 0, likes_counter: 0)
 
 # Jackson
-Post.create(author: User.find_by(name: 'Jackson'), title: 'Debating Team Won Tournament', text: "My debating team won the tournament! We're so proud of our hard work and dedication.")
-Post.create(author: User.find_by(name: 'Jackson'), title: 'Public Speaking Class', text: "I'm really enjoying my public speaking class. I'm learning about how to communicate effectively.")
+Post.create(author: User.find_by(name: 'Jackson'), title: 'Debating Team Won Tournament', text: "My debating team won the tournament! We're so proud of our hard work and dedication.", comments_counter: 0, likes_counter: 0)
+Post.create(author: User.find_by(name: 'Jackson'), title: 'Public Speaking Class', text: "I'm really enjoying my public speaking class. I'm learning about how to communicate effectively.", comments_counter: 0, likes_counter: 0)
 
 # Comments
 # for Clara, Post 2
-Comment.create(text: "That's so exciting, Clara! I'm sure you'll do great things.", user: User.find_by(name: 'Ava'),
+Comment.create(text: "That's so exciting, Clara! I'm sure you'll do great things.", author: User.find_by(name: 'Ava'),
     post: User.find_by(name: 'Clara').posts.second)
-Comment.create(text: "I'm really interested in AI too. What are you learning about?", user: User.find_by(name: 'Ben'),
+Comment.create(text: "I'm really interested in AI too. What are you learning about?", author: User.find_by(name: 'Ben'),
     post: User.find_by(name: 'Clara').posts.second)
 Comment.create(text: "I'm so impressed with your work, Clara! You're an inspiration to us all.",
-    user: User.find_by(name: 'Daniel'), post: User.find_by(name: 'Clara').posts.second)
+    author: User.find_by(name: 'Daniel'), post: User.find_by(name: 'Clara').posts.second)
 Comment.create(text: "I can't wait to see what you create next, Clara. You're a true innovator.",
-    user: User.find_by(name: 'Ethan'), post: User.find_by(name: 'Clara').posts.second)
+    author: User.find_by(name: 'Ethan'), post: User.find_by(name: 'Clara').posts.second)
 Comment.create(text: "I'm so glad you're enjoying your AI class, Clara. It's such an exciting field.",
-    user: User.find_by(name: 'Frank'), post: User.find_by(name: 'Clara').posts.second)
+    author: User.find_by(name: 'Frank'), post: User.find_by(name: 'Clara').posts.second)
 Comment.create(text: "That's great news, Clara! I'm sure you'll make a big difference in the world.",
-    user: User.find_by(name: 'Grace'), post: User.find_by(name: 'Clara').posts.second)
+    author: User.find_by(name: 'Grace'), post: User.find_by(name: 'Clara').posts.second)
 
 # for Ethan, Post 1
-Comment.create(text: "Congratulations, Ethan! That's a huge accomplishment.", user: User.find_by(name: 'Ava'),
+Comment.create(text: "Congratulations, Ethan! That's a huge accomplishment.", author: User.find_by(name: 'Ava'),
     post: User.find_by(name: 'Ethan').posts.first)
 Comment.create(text: "I'm so excited for you, Ethan! I can't wait to see what you do next.",
-    user: User.find_by(name: 'Ben'), post: User.find_by(name: 'Ethan').posts.first)
-Comment.create(text: "That's amazing, Ethan! You must be so proud of yourself.", user: User.find_by(name: 'Daniel'),
+    author: User.find_by(name: 'Ben'), post: User.find_by(name: 'Ethan').posts.first)
+Comment.create(text: "That's amazing, Ethan! You must be so proud of yourself.", author: User.find_by(name: 'Daniel'),
     post: User.find_by(name: 'Ethan').posts.first)
 
 # for Henry, Post 2
-Comment.create(text: "That's incredible, Henry! Congratulations on your hard work.", user: User.find_by(name: 'Ava'),
+Comment.create(text: "That's incredible, Henry! Congratulations on your hard work.", author: User.find_by(name: 'Ava'),
     post: User.find_by(name: 'Henry').posts.first)
-Comment.create(text: "Wow, Henry! That's a huge achievement. I'm so proud of you.", user: User.find_by(name: 'Ben'),
+Comment.create(text: "Wow, Henry! That's a huge achievement. I'm so proud of you.", author: User.find_by(name: 'Ben'),
     post: User.find_by(name: 'Henry').posts.first)
 Comment.create(text: 'Congratulations, Henry! Your research is making a real difference.',
-    user: User.find_by(name: 'Daniel'), post: User.find_by(name: 'Henry').posts.first)
-Comment.create(text: "That's amazing, Henry! I can't wait to read your paper.", user: User.find_by(name: 'Ethan'),
+    author: User.find_by(name: 'Daniel'), post: User.find_by(name: 'Henry').posts.first)
+Comment.create(text: "That's amazing, Henry! I can't wait to read your paper.", author: User.find_by(name: 'Ethan'),
     post: User.find_by(name: 'Henry').posts.first)
-Comment.create(text: "Congratulations, Henry! You're an inspiration to us all.", user: User.find_by(name: 'Frank'),
+Comment.create(text: "Congratulations, Henry! You're an inspiration to us all.", author: User.find_by(name: 'Frank'),
     post: User.find_by(name: 'Henry').posts.first)
 
 # for Ben, Post 2
-Comment.create(text: "That's so great, Ben! I'm sure you'll have a wonderful year.", user: User.find_by(name: 'Ava'),
+Comment.create(text: "That's so great, Ben! I'm sure you'll have a wonderful year.", author: User.find_by(name: 'Ava'),
     post: User.find_by(name: 'Ben').posts.second)
 Comment.create(text: "I'm so excited for you, Ben! Can't wait to see what you accomplish.",
-    user: User.find_by(name: 'Clara'), post: User.find_by(name: 'Ben').posts.second)
-Comment.create(text: 'Congratulations, Ben! You must be so proud of yourself.', user: User.find_by(name: 'Daniel'),
+    author: User.find_by(name: 'Clara'), post: User.find_by(name: 'Ben').posts.second)
+Comment.create(text: 'Congratulations, Ben! You must be so proud of yourself.', author: User.find_by(name: 'Daniel'),
     post: User.find_by(name: 'Ben').posts.second)
 Comment.create(text: "That's amazing, Ben! You deserve all the success you've worked so hard for.",
-    user: User.find_by(name: 'Ethan'), post: User.find_by(name: 'Ben').posts.second)
-Comment.create(text: "I'm so happy for you, Ben! You're an inspiration to us all.", user: User.find_by(name: 'Frank'),
+    author: User.find_by(name: 'Ethan'), post: User.find_by(name: 'Ben').posts.second)
+Comment.create(text: "I'm so happy for you, Ben! You're an inspiration to us all.", author: User.find_by(name: 'Frank'),
     post: User.find_by(name: 'Ben').posts.second)
 Comment.create(text: "Congratulations, Ben! I'm sure you'll make a big difference in your students' lives.",
-    user: User.find_by(name: 'Grace'), post: User.find_by(name: 'Ben').posts.second)
-Comment.create(text: "That's awesome, Ben! I'm so proud of you.", user: User.find_by(name: 'Henry'),
+    author: User.find_by(name: 'Grace'), post: User.find_by(name: 'Ben').posts.second)
+Comment.create(text: "That's awesome, Ben! I'm so proud of you.", author: User.find_by(name: 'Henry'),
     post: User.find_by(name: 'Ben').posts.second)
 Comment.create(text: "Wishing you all the best, Ben! Can't wait to hear about all your adventures.",
-    user: User.find_by(name: 'Isabella'), post: User.find_by(name: 'Ben').posts.second)
+    author: User.find_by(name: 'Isabella'), post: User.find_by(name: 'Ben').posts.second)
 
 # Likes
-Like.create(post: Post.find_by(id: 1), user: User.find_by(id: 2))
-Like.create(post: Post.find_by(id: 1), user: User.find_by(id: 7))
+Like.create(post: Post.find_by(id: 1), author: User.find_by(id: 2))
+Like.create(post: Post.find_by(id: 1), author: User.find_by(id: 7))
 
-Like.create(post: Post.find_by(id: 2), user: User.find_by(id: 1))
-Like.create(post: Post.find_by(id: 2), user: User.find_by(id: 4))
-Like.create(post: Post.find_by(id: 2), user: User.find_by(id: 8))
-Like.create(post: Post.find_by(id: 2), user: User.find_by(id: 10))
-Like.create(post: Post.find_by(id: 2), user: User.find_by(id: 6))
-Like.create(post: Post.find_by(id: 2), user: User.find_by(id: 5))
+Like.create(post: Post.find_by(id: 2), author: User.find_by(id: 1))
+Like.create(post: Post.find_by(id: 2), author: User.find_by(id: 4))
+Like.create(post: Post.find_by(id: 2), author: User.find_by(id: 8))
+Like.create(post: Post.find_by(id: 2), author: User.find_by(id: 10))
+Like.create(post: Post.find_by(id: 2), author: User.find_by(id: 6))
+Like.create(post: Post.find_by(id: 2), author: User.find_by(id: 5))
 
-Like.create(post: Post.find_by(id: 3), user: User.find_by(id: 3))
-Like.create(post: Post.find_by(id: 3), user: User.find_by(id: 5))
+Like.create(post: Post.find_by(id: 3), author: User.find_by(id: 3))
+Like.create(post: Post.find_by(id: 3), author: User.find_by(id: 5))
 
-Like.create(post: Post.find_by(id: 4), user: User.find_by(id: 6))
-Like.create(post: Post.find_by(id: 4), user: User.find_by(id: 7))
-Like.create(post: Post.find_by(id: 4), user: User.find_by(id: 10))
-Like.create(post: Post.find_by(id: 4), user: User.find_by(id: 9))
+Like.create(post: Post.find_by(id: 4), author: User.find_by(id: 6))
+Like.create(post: Post.find_by(id: 4), author: User.find_by(id: 7))
+Like.create(post: Post.find_by(id: 4), author: User.find_by(id: 10))
+Like.create(post: Post.find_by(id: 4), author: User.find_by(id: 9))
 
-Like.create(post: Post.find_by(id: 5), user: User.find_by(id: 1))
-Like.create(post: Post.find_by(id: 5), user: User.find_by(id: 2))
+Like.create(post: Post.find_by(id: 5), author: User.find_by(id: 1))
+Like.create(post: Post.find_by(id: 5), author: User.find_by(id: 2))
 
-Like.create(post: Post.find_by(id: 6), user: User.find_by(id: 3))
-Like.create(post: Post.find_by(id: 6), user: User.find_by(id: 5))
-Like.create(post: Post.find_by(id: 6), user: User.find_by(id: 8))
+Like.create(post: Post.find_by(id: 6), author: User.find_by(id: 3))
+Like.create(post: Post.find_by(id: 6), author: User.find_by(id: 5))
+Like.create(post: Post.find_by(id: 6), author: User.find_by(id: 8))
 
-Like.create(post: Post.find_by(id: 7), user: User.find_by(id: 4))
+Like.create(post: Post.find_by(id: 7), author: User.find_by(id: 4))
 
-Like.create(post: Post.find_by(id: 8), user: User.find_by(id: 1))
-Like.create(post: Post.find_by(id: 8), user: User.find_by(id: 2))
-Like.create(post: Post.find_by(id: 8), user: User.find_by(id: 5))
-Like.create(post: Post.find_by(id: 8), user: User.find_by(id: 7))
-Like.create(post: Post.find_by(id: 8), user: User.find_by(id: 9))
-Like.create(post: Post.find_by(id: 8), user: User.find_by(id: 6))
-Like.create(post: Post.find_by(id: 8), user: User.find_by(id: 8))
-Like.create(post: Post.find_by(id: 8), user: User.find_by(id: 10))
+Like.create(post: Post.find_by(id: 8), author: User.find_by(id: 1))
+Like.create(post: Post.find_by(id: 8), author: User.find_by(id: 2))
+Like.create(post: Post.find_by(id: 8), author: User.find_by(id: 5))
+Like.create(post: Post.find_by(id: 8), author: User.find_by(id: 7))
+Like.create(post: Post.find_by(id: 8), author: User.find_by(id: 9))
+Like.create(post: Post.find_by(id: 8), author: User.find_by(id: 6))
+Like.create(post: Post.find_by(id: 8), author: User.find_by(id: 8))
+Like.create(post: Post.find_by(id: 8), author: User.find_by(id: 10))
 
-Like.create(post: Post.find_by(id: 9), user: User.find_by(id: 3))
+Like.create(post: Post.find_by(id: 9), author: User.find_by(id: 3))
 
-Like.create(post: Post.find_by(id: 10), user: User.find_by(id: 4))
-Like.create(post: Post.find_by(id: 10), user: User.find_by(id: 7))
+Like.create(post: Post.find_by(id: 10), author: User.find_by(id: 4))
+Like.create(post: Post.find_by(id: 10), author: User.find_by(id: 7))
 
-Like.create(post: Post.find_by(id: 11), user: User.find_by(id: 1))
-Like.create(post: Post.find_by(id: 11), user: User.find_by(id: 5))
-Like.create(post: Post.find_by(id: 11), user: User.find_by(id: 9))
-Like.create(post: Post.find_by(id: 11), user: User.find_by(id: 2))
-Like.create(post: Post.find_by(id: 11), user: User.find_by(id: 8))
+Like.create(post: Post.find_by(id: 11), author: User.find_by(id: 1))
+Like.create(post: Post.find_by(id: 11), author: User.find_by(id: 5))
+Like.create(post: Post.find_by(id: 11), author: User.find_by(id: 9))
+Like.create(post: Post.find_by(id: 11), author: User.find_by(id: 2))
+Like.create(post: Post.find_by(id: 11), author: User.find_by(id: 8))
 
-Like.create(post: Post.find_by(id: 12), user: User.find_by(id: 2))
-Like.create(post: Post.find_by(id: 12), user: User.find_by(id: 6))
-Like.create(post: Post.find_by(id: 12), user: User.find_by(id: 8))
+Like.create(post: Post.find_by(id: 12), author: User.find_by(id: 2))
+Like.create(post: Post.find_by(id: 12), author: User.find_by(id: 6))
+Like.create(post: Post.find_by(id: 12), author: User.find_by(id: 8))
 
-Like.create(post: Post.find_by(id: 13), user: User.find_by(id: 3))
+Like.create(post: Post.find_by(id: 13), author: User.find_by(id: 3))
 
-Like.create(post: Post.find_by(id: 14), user: User.find_by(id: 4))
-Like.create(post: Post.find_by(id: 14), user: User.find_by(id: 5))
-Like.create(post: Post.find_by(id: 14), user: User.find_by(id: 6))
-Like.create(post: Post.find_by(id: 14), user: User.find_by(id: 7))
-Like.create(post: Post.find_by(id: 14), user: User.find_by(id: 10))
+Like.create(post: Post.find_by(id: 14), author: User.find_by(id: 4))
+Like.create(post: Post.find_by(id: 14), author: User.find_by(id: 5))
+Like.create(post: Post.find_by(id: 14), author: User.find_by(id: 6))
+Like.create(post: Post.find_by(id: 14), author: User.find_by(id: 7))
+Like.create(post: Post.find_by(id: 14), author: User.find_by(id: 10))
 
-Like.create(post: Post.find_by(id: 15), user: User.find_by(id: 1))
+Like.create(post: Post.find_by(id: 15), author: User.find_by(id: 1))
 
-Like.create(post: Post.find_by(id: 16), user: User.find_by(id: 3))
-Like.create(post: Post.find_by(id: 16), user: User.find_by(id: 5))
-Like.create(post: Post.find_by(id: 16), user: User.find_by(id: 9))
-Like.create(post: Post.find_by(id: 16), user: User.find_by(id: 6))
-Like.create(post: Post.find_by(id: 16), user: User.find_by(id: 8))
+Like.create(post: Post.find_by(id: 16), author: User.find_by(id: 3))
+Like.create(post: Post.find_by(id: 16), author: User.find_by(id: 5))
+Like.create(post: Post.find_by(id: 16), author: User.find_by(id: 9))
+Like.create(post: Post.find_by(id: 16), author: User.find_by(id: 6))
+Like.create(post: Post.find_by(id: 16), author: User.find_by(id: 8))
 
-Like.create(post: Post.find_by(id: 17), user: User.find_by(id: 4))
-Like.create(post: Post.find_by(id: 17), user: User.find_by(id: 7))
-Like.create(post: Post.find_by(id: 17), user: User.find_by(id: 10))
+Like.create(post: Post.find_by(id: 17), author: User.find_by(id: 4))
+Like.create(post: Post.find_by(id: 17), author: User.find_by(id: 7))
+Like.create(post: Post.find_by(id: 17), author: User.find_by(id: 10))
 
-Like.create(post: Post.find_by(id: 18), user: User.find_by(id: 1))
-Like.create(post: Post.find_by(id: 18), user: User.find_by(id: 2))
+Like.create(post: Post.find_by(id: 18), author: User.find_by(id: 1))
+Like.create(post: Post.find_by(id: 18), author: User.find_by(id: 2))
 
-Like.create(post: Post.find_by(id: 19), user: User.find_by(id: 3))
+Like.create(post: Post.find_by(id: 19), author: User.find_by(id: 3))
