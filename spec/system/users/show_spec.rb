@@ -36,10 +36,18 @@ RSpec.describe 'User page [users#show]', type: :system do
 
     it '- the user\'s 3 most recent posts' do
       visit user_path(@user)
-      sleep(3)
       @user.three_most_recent_posts.each do |p|
         expect(page).to have_selector('div div h6').and have_content(/Post ##{p.id}/)
         expect(page).to have_selector('div div h4').and have_content(/#{p.title}/)
+      end
+    end
+
+    context '- each post displays:' do
+      it '> the number of comments' do
+        selector = 'div div p'
+        @user.three_most_recent_posts.each do |p|
+          expect(page).to have_selector(selector).and have_content("Comments: #{p.comments_counter}")
+        end
       end
     end
   end
