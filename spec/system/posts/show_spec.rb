@@ -37,6 +37,10 @@ RSpec.describe 'Post page [posts#show]', type: :system do
       within('div div h3') { expect(page).to have_content(@post.title) }
     end
 
+    it '- the post message' do
+      within('div div h4') { expect(page).to have_content(@post.text) }
+    end
+
     it '- the post number(id)' do
       within('div div h6') { expect(page).to have_content(/Post ##{@post.id}/) }
     end
