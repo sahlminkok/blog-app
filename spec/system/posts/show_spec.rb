@@ -36,5 +36,9 @@ RSpec.describe 'Post page [posts#show]', type: :system do
     it '- the post title' do
       within('div div h3') { expect(page).to have_content(@post.title) }
     end
+
+    it '- the post number(id)' do
+      within('div div h6') { expect(page).to have_content(/Post ##{@post.id}/) }
+    end
   end
 end
