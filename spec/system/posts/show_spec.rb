@@ -78,4 +78,14 @@ RSpec.describe 'Post page [posts#show]', type: :system do
       end
     end
   end
+
+  describe '* user interactions' do
+    before { visit user_post_path(@user, @post) }
+
+    context '- an \'add a comment\' button:' do
+      it '> is displayed at the bottom of the page ' do
+        expect(page).to have_link('Add a comment')
+      end
+    end
+  end
 end
