@@ -19,5 +19,11 @@ RSpec.describe 'User page [users#show]', type: :system do
       sleep(1)
       expect(page).to have_css("img[src*='#{@user.photo}']")
     end
+
+    it '- the number of posts the user has written' do
+      visit user_path(@user)
+      sleep(1)
+      expect(page).to have_content("Number of posts: #{@user.posts_counter}")
+    end
   end
 end
