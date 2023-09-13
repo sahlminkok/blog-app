@@ -92,5 +92,11 @@ RSpec.describe 'Post page [posts#show]', type: :system do
         expect(page).to have_current_path(new_user_post_comment_path(User.first, @post))
       end
     end
+
+    context '- a \'like\' button:' do
+      it '> is displayed at the bottom of the page ' do
+        expect(page).to have_button('Like')
+      end
+    end
   end
 end
