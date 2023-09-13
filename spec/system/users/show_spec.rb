@@ -16,14 +16,18 @@ RSpec.describe 'User page [users#show]', type: :system do
 
     it '- the user\'s profile picture' do
       visit user_path(@user)
-      sleep(1)
       expect(page).to have_css("img[src*='#{@user.photo}']")
     end
 
     it '- the number of posts the user has written' do
       visit user_path(@user)
-      sleep(1)
       expect(page).to have_content("Number of posts: #{@user.posts_counter}")
+    end
+
+    it '- the user\'s bio' do
+      visit user_path(@user)
+      expect(page).to have_selector('div h4').and have_content(/Bio/)
+      expect(page).to have_selector('div').and have_content(/Bio\n#{@user.bio}/)
     end
   end
 end
