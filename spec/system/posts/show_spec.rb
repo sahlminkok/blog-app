@@ -97,6 +97,11 @@ RSpec.describe 'Post page [posts#show]', type: :system do
       it '> is displayed at the bottom of the page ' do
         expect(page).to have_button('Like')
       end
+
+      it '> when clicked, increases by 1 the number of likes' do
+        click_on('Like')
+        within('div div div p') { expect(page).to have_content(/Likes: #{@post.likes_counter_was + 1}/) }
+      end
     end
   end
 end
