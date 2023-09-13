@@ -68,6 +68,14 @@ RSpec.describe 'User page [users#show]', type: :system do
           expect(page).to have_css("a[href*='/users/#{@user.id}/posts/#{p.id}']")
         end
       end
-    end
+
+      it "> when clicked it opens the 'post' page" do
+        @user.three_most_recent_posts.each do |p|
+          visit user_path(@user)
+          find("a[href*='/users/#{@user.id}/posts/#{p.id}']").click
+          expect(page).to have_current_path(user_post_path(@user, p))
+        end
+      end
+  end
   end
 end
