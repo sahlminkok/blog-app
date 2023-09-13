@@ -9,19 +9,18 @@ RSpec.describe 'Post page [posts#show]', type: :system do
     @users = []
     qty.each do |u|
       @users << User.create(name: "user #{u}", photo: "https://plchldr.co/i/75?bg=252f3f&fc=ffffff&text=user-#{u}",
-      bio: "This is the user #{u} bio.", posts_counter: 0)
+                            bio: "This is the user #{u} bio.", posts_counter: 0)
     end
     @posts = []
     qty.each do |p|
-      @posts << Post.create(author: @user, title: "Title #{p}", text: "Post #{p} message", comments_counter: 0, likes_counter: 0)
+      @posts << Post.create(author: @user, title: "Title #{p}", text: "Post #{p} message", comments_counter: 0,
+                            likes_counter: 0)
     end
     @posts.each do |p|
       (1..'123456789'.chars.sample(7).sample.to_i).each do |c|
         u = @users.sample(6).sample
         Comment.create(author: u, text: "This is comment #{c}, by #{u.name}", post: p)
       end
-    end
-    @posts.each do |p|
       (1..'123456'.chars.sample(5).sample.to_i).each do |_c|
         u = @users.sample(5).sample
         Like.create(author: u, post: p)
@@ -55,6 +54,14 @@ RSpec.describe 'Post page [posts#show]', type: :system do
 
     it '- the number of likes' do
       within('div div div p') { expect(page).to have_content(/Likes: #{@post.likes_counter}/) }
+    end
+  end
+
+  describe '* if the post has comments:' do
+    before { visit user_post_path(@user, @post) }
+
+    it '- shows the full list of comments' do
+      within('div.comments') { expect(page.all('p').count).to be(@post.comments_counter) }
     end
   end
 end
