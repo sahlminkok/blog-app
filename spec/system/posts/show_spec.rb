@@ -102,6 +102,11 @@ RSpec.describe 'Post page [posts#show]', type: :system do
         click_on('Like')
         within('div div div p') { expect(page).to have_content(/Likes: #{@post.likes_counter_was + 1}/) }
       end
+
+      it '> the \'post\' page is still the current page' do
+        click_on('Like')
+        expect(page).to have_current_path(user_post_path(@user, @post))
+      end
     end
   end
 end
