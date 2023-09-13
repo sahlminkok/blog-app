@@ -33,7 +33,7 @@ RSpec.describe 'User page [users#show]', type: :system do
 
   describe '* shows user\'s activity like:' do
     before { visit user_path(@user) }
-
+    
     it '- the user\'s 3 most recent posts' do
       visit user_path(@user)
       @user.three_most_recent_posts.each do |p|
@@ -49,11 +49,23 @@ RSpec.describe 'User page [users#show]', type: :system do
           expect(page).to have_selector(selector).and have_content("Comments: #{p.comments_counter}")
         end
       end
-
+      
       it '> the number of likes' do
         selector = 'div div p'
         @user.three_most_recent_posts.each do |p|
           expect(page).to have_selector(selector).and have_content("Likes: #{p.likes_counter}")
+        end
+      end
+    end
+  end
+  
+  describe '* user interactions' do
+    before { visit user_path(@user) }
+
+    context '- each post displayed:' do
+      it "> is clickable" do
+        @user.three_most_recent_posts.each do |p|
+          expect(page).to have_css("a[href*='/users/#{@user.id}/posts/#{p.id}']")
         end
       end
     end
