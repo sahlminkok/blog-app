@@ -48,5 +48,9 @@ RSpec.describe 'Post page [posts#show]', type: :system do
     it '- the number of comments' do
       within('div div div p') { expect(page).to have_content(/Comments: #{@post.comments_counter}/) }
     end
+
+    it '- the number of likes' do
+      within('div div div p') { expect(page).to have_content(/Likes: #{@post.likes_counter}/) }
+    end
   end
 end
