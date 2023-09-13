@@ -113,6 +113,11 @@ RSpec.describe 'Post page [posts#show]', type: :system do
       it '> is displayed at the bottom of the page ' do
         expect(page).to have_link('Back')
       end
+
+      it '> when clicked, it opens the user\'s \'all posts\' page' do
+        click_on('Back')
+        expect(page).to have_current_path(user_posts_path(@user))
+      end
     end
   end
 end
