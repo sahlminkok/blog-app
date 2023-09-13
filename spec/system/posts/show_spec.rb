@@ -40,5 +40,9 @@ RSpec.describe 'Post page [posts#show]', type: :system do
     it '- the post number(id)' do
       within('div div h6') { expect(page).to have_content(/Post ##{@post.id}/) }
     end
+
+    it '- the post\'s author' do
+      within('div div h6') { expect(page).to have_content(/by #{@user.name}/) }
+    end
   end
 end
