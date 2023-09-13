@@ -70,6 +70,12 @@ RSpec.describe 'Post page [posts#show]', type: :system do
           within('div.comments') { expect(page).to have_content(/#{c.author.name}:/) }
         end
       end
+
+      it '- has a message/text' do
+        @post.comments.each do |c|
+          within('div.comments') { expect(page).to have_content(/: #{c.text}/) }
+        end
+      end
     end
   end
 end
