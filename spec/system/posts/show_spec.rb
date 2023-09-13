@@ -20,11 +20,21 @@ RSpec.describe 'Post page [posts#show]', type: :system do
         u = @users.sample(6).sample
         Comment.create(author: u, text: "This is comment #{c}, by #{u.name}", post: p)
       end
+    end
     @posts.each do |p|
       (1..'123456'.chars.sample(5).sample.to_i).each do |_c|
         u = @users.sample(5).sample
-        Comment.create(author: u, post: p)
+        Like.create(author: u, post: p)
       end
+    end
+    @post = @posts.sample(4).sample
+  end
+
+  describe '* shows full post\'s info like:' do
+    before { visit user_post_path(@user, @post) }
+
+    it '- the post title' do
+      within('div div h3') { expect(page).to have_content(@post.title) }
     end
   end
 end
