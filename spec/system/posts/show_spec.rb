@@ -44,5 +44,9 @@ RSpec.describe 'Post page [posts#show]', type: :system do
     it '- the post\'s author' do
       within('div div h6') { expect(page).to have_content(/by #{@user.name}/) }
     end
+
+    it '- the number of comments' do
+      within('div div div p') { expect(page).to have_content(/Comments: #{@post.comments_counter}/) }
+    end
   end
 end
