@@ -13,5 +13,11 @@ RSpec.describe 'User page [users#show]', type: :system do
       visit user_path(@user)
       expect(page).to have_content(@user.name)
     end
+
+    it '- the user\'s profile picture' do
+      visit user_path(@user)
+      sleep(1)
+      expect(page).to have_css("img[src*='#{@user.photo}']")
+    end
   end
 end
