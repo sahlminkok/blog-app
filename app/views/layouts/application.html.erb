@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <title>Blog App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,12 +16,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    
-    <div class="container mt-5 mb-5">
+  <body class="d-flex flex-column h-100">
+    <%= render 'partials/navbar' %>
+    <div class="container mt-2 mb-2">
+      <p class="notice text-secondary"><%= notice %></p>
+      <p class="alert text-secondary"><%= alert %></p>
       <%= yield %>
     </div>
 
+    <%= render "partials/footer" %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
   </body>
