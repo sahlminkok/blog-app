@@ -34,3 +34,4 @@
 node_modules/
 # Ignore .vscode settings
 .vscode
+config.bat
