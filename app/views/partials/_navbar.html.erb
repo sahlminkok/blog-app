@@ -13,7 +13,7 @@
             <%= link_to "Edit User Info", edit_user_registration_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link border-0 bg-transparent" %>
           </li>
         <% else %>
           <li class="nav-item">
