@@ -1,5 +1,5 @@
 <div class="comments">
   <% comments.each do |comment| %>
-    <p><%= comment.author.name %>: <%= comment.text %></p>
+    <p><span class="fw-bold"><%= comment.author.name %></span>: <%= comment.text %></p>
   <% end %>
 </div>
