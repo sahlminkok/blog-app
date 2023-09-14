@@ -12,5 +12,5 @@
 <div class="d-flex">
   <%= link_to "Add a comment", new_user_post_comment_path(@user, @post), class: "btn bg-secondary text-white", style: "margin-right: 10px" %>
   <%= button_to 'Like', user_post_likes_path(@user, @post), method: :post, class: 'btn btn-secondary', style: "margin-right: 10px" %>
-  <%= link_to "Back", user_posts_path(@user, @post), class: "btn btn-secondary" %>
+  <%= link_to "Back", user_posts_path(@post.author), class: "btn btn-secondary" %>
 </div>

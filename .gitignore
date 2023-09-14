@@ -32,3 +32,5 @@
 
 # Ignore node modules files
 node_modules/
+# Ignore .vscode settings
+.vscode
