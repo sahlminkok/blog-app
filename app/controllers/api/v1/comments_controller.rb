@@ -16,4 +16,10 @@ class Api::V1::CommentsController < ApplicationController
       render json: { errors: comment.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:text)
+  end
 end
